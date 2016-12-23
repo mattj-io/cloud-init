@@ -10,5 +10,4 @@ runcmd:
   - su hugo - -c "git clone https://github.com/mattj-io/hugo-config.git /home/hugo/hugo-config"
   - ln -s /home/hugo/hugo-config/hugo.service /etc/systemd/system/hugo.service
   - su hugo - -c "cd /home/hugo/mattj.blog && git submodule init && git submodule update"
-  - iptables -A PREROUTING -t nat -p tcp --dport 80 -j REDIRECT --to-port 8080
   - systemctl start hugo
