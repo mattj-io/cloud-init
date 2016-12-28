@@ -9,4 +9,5 @@ runcmd:
   - su znc - -c "git clone https://github.com/mattj-io/cloud-init.git /home/znc/cloud-init"
   - su znc - -c "mkdir -p /home/znc/.znc/{configs,users,moddata}"
   - su znc - -c "ln -s /home/znc/cloud-init/znc.conf /home/znc/.znc/configs/znc.conf"
+  - su znc - -c "ln -s /home/znc/cloud-init/znc.pem /home/znc/.znc/znc.pem"
   - su znc - -c "(crontab -l 2>/dev/null; echo \"*/2 * * * * /usr/bin/znc >/dev/null 2>&1\") | crontab -"
