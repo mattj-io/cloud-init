@@ -1,0 +1,4 @@
+#!/bin/bash
+lxc delete --force $1
+sudo sed -i /$1/d /var/lib/misc/dnsmasq.leases
+sudo service dnsmasq restart
